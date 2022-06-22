@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container" style="padding-top: 45px; padding-bottom:45px">
+    {% for post in posts %}
+
+    <div class="card" style="width: 48rem; margin-bottom: 30px;">
+        <img src="{{ post.image.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h3 class="card-title">{{ post.title }}</h3>
+            <h3 class="card-title">Jumlah buku =>{{ post.jumlah }}</h3>
+            <small>{{ post.date }}</small>
+            <p class="card-text">{{ post.content|truncatechars:199 }}</p>
+            <a href="/detail/{{ post.id }}" class="btn btn-primary">More</a>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+<div class="container">
+
+    <div class="pagination">
+        <span class="step-links">
+            {% if posts.has_previous %}
+            <a href="?page=1{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">&laquo; first</a>
+            <a
+                href="?page={{ posts.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ posts.number }} of {{ posts.paginator.num_pages }}.
+            </span>
+
+            {% if posts.has_next %}
+            <a href="?page={{ posts.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">next</a>
+            <a href="?page={{ posts.paginator.num_pages }}">last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+
+</div>
+{% endblock %}

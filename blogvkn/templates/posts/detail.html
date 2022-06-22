@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container" style="padding-top: 45px; padding-bottom:45px">
+
+    <div class="card" style="width: 48rem; margin-bottom: 30px;">
+        <img src="{{ post.image.url }}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h3 class="card-title">{{ post.title }}</h3>
+            <h3 class="card-title">Jumlah=> {{ post.jumlah }}</h3>
+            <small>{{ post.date }}</small>
+            <p class="card-text">{{ post.content }}</p>
+            <a href="{% url 'delete' post.id %}" class="btn btn-danger"
+                onclick="return confirm('Are you sure to') ">Delete</a>
+            <a href="{% url 'update' post.id %}" class="btn btn-primary">Update</a>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

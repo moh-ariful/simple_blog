@@ -1,0 +1,23 @@
+[33mcommit c71d129d496aac4aaa6b9ccc6c6e7ea7d0e53de3[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: Moh Ariful <nextkoding@gmail.com>
+Date:   Wed Jun 22 08:43:39 2022 +0700
+
+    Membuat registrasi form, form logout, dan messages saat user memposting, menghapus, login dan logout
+
+[33mcommit 75c074fdf3dab9b59c5562689b3782118f153c65[m
+Author: Moh Ariful <nextkoding@gmail.com>
+Date:   Wed Jun 22 07:51:10 2022 +0700
+
+    Membuat Login Form untuk User Login dgn mengisi kode di file urls.py, views.py, forms.py dan login.html
+
+[33mcommit a103608477b8af043dc8141c84e72f0fda27454e[m
+Author: Moh Ariful <nextkoding@gmail.com>
+Date:   Tue Jun 21 21:52:38 2022 +0700
+
+    Membuat app baru bernama users
+
+[33mcommit 07e833b18c08b37f1bb5ec0b02c08e6a99e1e0ff[m
+Author: Moh Ariful <nextkoding@gmail.com>
+Date:   Tue Jun 21 21:22:35 2022 +0700
+
+    Mengubah tampilan di file index.html
